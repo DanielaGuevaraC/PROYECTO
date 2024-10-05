@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                <input type="text" id="globalSearch" placeholder="Buscar productos...">
+                <button type="button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-center">
+                <span class="store-name" style="color: black;">FASHION</span>
+            </div>
+            <div class="header-right">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+                <a href="#"><i class="fas fa-th-large"></i></a>
+                <a href="#"><i class="fas fa-tags"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="#"><i class="fas fa-heart"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2>Carrito de Compras</h2>
+        <div class="cart">
+            <ul id="cart-items-list"></ul>
+            <div class="total">
+                <strong>Total:</strong> <span id="total-price">$0.00</span>
+            </div>
+            <button id="checkout-button">Finalizar Compra</button>
+            <button id="cancel-button">Cancelar Compra</button>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="styles.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#cancel-button').on('click', function() {
+                localStorage.removeItem('cartItems'); 
+                alert('La compra ha sido cancelada');
+                displayCartItems(); 
+            });
+        });
+    </script>
+</body>
+</html>

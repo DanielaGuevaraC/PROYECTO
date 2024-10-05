@@ -6,7 +6,7 @@
     <title>FASHION</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 </head>
 <body>
     <header>
@@ -23,7 +23,7 @@
                 <a href="#"><i class="fas fa-home"></i></a>
                 <a href="#"><i class="fas fa-th-large"></i></a>
                 <a href="#"><i class="fas fa-tags"></i></a>
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
                 <a href="#"><i class="fas fa-heart"></i></a>
             </div>
         </div>
@@ -44,6 +44,7 @@
                         <th>Nombre</th>
                         <th>Precio</th>
                         <th>Favoritos</th>
+                        <th>Cantidad</th>
                         <th>Carrito</th>
                     </tr>
                 </thead>
@@ -53,35 +54,40 @@
                         <td>Mono</td>
                         <td>$299.99</td>
                         <td><button onclick="addToFavorites('Mono')"><i class="fas fa-heart"></i></button></td>
-                        <td><button onclick="addToCart('Mono')"><i class="fas fa-shopping-cart"></i></button></td>
+                        <td><input type="number" id="quantity-mono" value="1" min="1"></td>
+                        <td><button onclick="addToCart('Mono', 299.99, 'quantity-mono')"><i class="fas fa-shopping-cart"></i></button></td>
                     </tr>
                     <tr>
                         <td><img src="vestido.jpg" class="product-image"></td>
                         <td>Vestido largo</td>
                         <td>$399.99</td>
                         <td><button onclick="addToFavorites('Vestido')"><i class="fas fa-heart"></i></button></td>
-                        <td><button onclick="addToCart('Vestido')"><i class="fas fa-shopping-cart"></i></button></td>
+                        <td><input type="number" id="quantity-vestido" value="1" min="1"></td>
+                        <td><button onclick="addToCart('Vestido', 399.99, 'quantity-vestido')"><i class="fas fa-shopping-cart">
                     </tr>
                     <tr>
                         <td><img src="pantalonm.jpg" class="product-image"></td>
                         <td>Pantalon</td>
                         <td>$499.99</td>
                         <td><button onclick="addToFavorites('Pantalon')"><i class="fas fa-heart"></i></button></td>
-                        <td><button onclick="addToCart('Pantalon')"><i class="fas fa-shopping-cart"></i></button></td>
+                        <td><input type="number" id="quantity-pantalon" value="1" min="1"></td>
+                       <td><button onclick="addToCart('pantalon', 499.99, 'quantity-pantalon')"><i class="fas fa-shopping-cart">
                     </tr>
                     <tr>
                         <td><img src="zapatosm.jpg" class="product-image"></td>
                         <td>Zapatos</td>
                         <td>$199.99</td>
                         <td><button onclick="addToFavorites('Zapatos')"><i class="fas fa-heart"></i></button></td>
-                        <td><button onclick="addToCart('Zapatos')"><i class="fas fa-shopping-cart"></i></button></td>
+                        <td><input type="number" id="quantity-zapatos" value="1" min="1"></td>
+                        <td><button onclick="addToCart('Zapatos', 199.99, 'quantity-zapatos')"><i class="fas fa-shopping-cart">
                     </tr>
                     <tr>
                         <td><img src="rubor.jpg" class="product-image"></td>
                         <td>Rubor</td>
                         <td>$99.99</td>
                         <td><button onclick="addToFavorites('Rubor')"><i class="fas fa-heart"></i></button></td>
-                        <td><button onclick="addToCart('Rubor')"><i class="fas fa-shopping-cart"></i></button></td>
+                        <td><input type="number" id="quantity-rubor" value="1" min="1"></td>
+                       <td><button onclick="addToCart('Rubor', 99.99, 'quantity-rubor')"><i class="fas fa-shopping-cart">
                     </tr>
                 </tbody>
             </table>
@@ -94,6 +100,7 @@
                         <th>Nombre</th>
                         <th>Precio</th>
                         <th>Favoritos</th>
+                        <th>Cantidad</th>
                         <th>Carrito</th>
                     </tr>
                 </thead>
@@ -103,35 +110,40 @@
                         <td>Camisa</td>
                         <td>$199.99</td>
                         <td><button onclick="addToFavorites('Camisa')"><i class="fas fa-heart"></i></button></td>
-                        <td><button onclick="addToCart('Camisa')"><i class="fas fa-shopping-cart"></i></button></td>
+                        <td><input type="number" id="quantity-camisa" value="1" min="1"></td>
+                        <td><button onclick="addToCart('Camisa', 199.99, 'quantity-camisa')"><i class="fas fa-shopping-cart"></i></button></td>
                     </tr>
                     <tr>
                         <td><img src="chaleco.jpg" class="product-image"></td>
                         <td>Chaleco</td>
                         <td>$299.99</td>
                         <td><button onclick="addToFavorites('Chaleco')"><i class="fas fa-heart"></i></button></td>
-                        <td><button onclick="addToCart('Chaleco')"><i class="fas fa-shopping-cart"></i></button></td>
+                        <td><input type="number" id="quantity-chaleco" value="1" min="1"></td>
+                        <td><button onclick="addToCart('Chaleco', 299.99, 'quantity-chaleco')"><i class="fas fa-shopping-cart"></i></button></td>
                     </tr>
                     <tr>
                         <td><img src="pantalonh.jpg" class="product-image"></td>
                         <td>Pantalon</td>
                         <td>$499.99</td>
                         <td><button onclick="addToFavorites('Pantalon')"><i class="fas fa-heart"></i></button></td>
-                        <td><button onclick="addToCart('Pantalon')"><i class="fas fa-shopping-cart"></i></button></td>
+                        <td><input type="number" id="quantity-pantalonh" value="1" min="1"></td>
+                        <td><button onclick="addToCart('Pantalon', 499.99, 'quantity-pantalonh')"><i class="fas fa-shopping-cart"></i></button></td>
                     </tr>
                     <tr>
                         <td><img src="zapatoh.jpg" class="product-image"></td>
                         <td>Zapatos</td>
                         <td>$299.99</td>
                         <td><button onclick="addToFavorites('Zapatos')"><i class="fas fa-heart"></i></button></td>
-                        <td><button onclick="addToCart('Zapatos')"><i class="fas fa-shopping-cart"></i></button></td>
+                        <td><input type="number" id="quantity-zpatosh" value="1" min="1"></td>
+                        <td><button onclick="addToCart('Zapatos', 299.99, 'quantity-zapatosh')"><i class="fas fa-shopping-cart"></i></button></td>
                     </tr>
                     <tr>
                         <td><img src="corbata.jpg" class="product-image"></td>
                         <td>Corbata</td>
                         <td>$99.99</td>
                         <td><button onclick="addToFavorites('Corbata')"><i class="fas fa-heart"></i></button></td>
-                        <td><button onclick="addToCart('Corbata')"><i class="fas fa-shopping-cart"></i></button></td>
+                        <td><input type="number" id="quantity-corbata" value="1" min="1"></td>
+                        <td><button onclick="addToCart('Corbata', 99.99, 'quantity-corbata')"><i class="fas fa-shopping-cart"></i></button></td>
                     </tr>
                 </tbody>
             </table>
@@ -153,22 +165,27 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <script src="script.js"></script>
+    <script src="styles.js"></script>
     <script>
         $(document).ready(function() {
-            // Inicializa DataTables
-            var womenTable = $('#womenProducts').DataTable();
-            var menTable = $('#menProducts').DataTable();
-
-            // Funcionalidad de búsqueda global
+            $('#womenProducts').DataTable({
+                "searching": true,
+                "paging": true,
+                "info": false
+            });
+    
+            $('#menProducts').DataTable({
+                "searching": true,
+                "paging": true,
+                "info": false
+            });
+    
             $('#globalSearch').on('keyup', function() {
                 var searchTerm = this.value;
-                womenTable.search(searchTerm).draw();
-                menTable.search(searchTerm).draw();
+                $('#womenProducts').DataTable().search(searchTerm).draw();
+                $('#menProducts').DataTable().search(searchTerm).draw();
             });
         });
     </script>
 </body>
-
-
 </html>
