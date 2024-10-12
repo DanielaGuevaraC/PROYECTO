@@ -17,7 +17,7 @@
                 <button type="button"><i class="fas fa-search"></i></button>
             </div>
             <div class="header-center">
-                <span class="store-name" style="color: black;">FASHION</span>
+                <span class="store-name">FASHION</span>
             </div>
             <div class="header-right">
                 <a href="index.html"><i class="fas fa-home"></i></a>
@@ -43,14 +43,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="styles.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#cancel-button').on('click', function() {
-                localStorage.removeItem('cartItems'); 
-                alert('La compra ha sido cancelada');
-                displayCartItems(); 
-            });
-        });
-    </script>
 </body>
 </html>
+
